@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/searchCardParent"
+    android:layout_margin="3dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchCard">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/searchImg"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="fitCenter"
+                android:layout_alignParentLeft="true"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_toRightOf="@+id/searchImg"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Product Name"
+                    android:id="@+id/searchName"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/searchName"
+                    android:text="$0.0"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:id="@+id/searchPrice"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchPrice"
+                    android:id="@+id/quantitySelect"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/quantityMinus"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:backgroundTint="#FFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/minus" />
+                    <!--                android:layout_toRightOf="@+id/quantityNum"-->
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/quantityNum"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="25dp"/>
+
+
+                    <ImageButton
+                        android:id="@+id/quantityPlus"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:scaleType="centerInside"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/plus" />
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add To Cart"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/btnAddCart"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/colorAccent"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

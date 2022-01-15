@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/demoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/chattImageView"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/demoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/demoImageView"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Recipe Name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/demoTitle"
+            android:id="@+id/demoCookTime"
+            android:text="Cook Time"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/demoTitle"
+            android:id="@+id/demoServingSize"
+            android:text="Serving Size"
+            android:layout_alignParentLeft="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/demoTagRecView"
+            android:layout_below="@id/demoServingSize"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingreListTitle"
+            android:text="Ingredients List"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@id/demoTagRecView"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingreRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/ingreListTitle">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:layout_below="@id/ingreRecyclerView"
+            android:background="@color/colorAccent"
+            android:text="Instructions"
+            android:id="@+id/instructionsTitle"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/demoInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/instructionsTitle"
+            android:text="Instructions"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+</ScrollView>
+
+
+
+
+</RelativeLayout>

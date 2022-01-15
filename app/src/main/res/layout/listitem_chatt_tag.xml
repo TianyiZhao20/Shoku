@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chattTagParent"
+    app:cardCornerRadius="30dp"
+    android:layout_marginHorizontal="5dp"
+    android:backgroundTint="@color/colorAccent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tag name"
+        android:id="@+id/tagTextView"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        />
+
+</androidx.cardview.widget.CardView>

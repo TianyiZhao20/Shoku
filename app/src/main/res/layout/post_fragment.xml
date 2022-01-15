@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="LabelFor"
+    android:background="#FFFFFF"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+<!--            submit button-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postWarning"
+                    android:text="Please fill out all fields before submitting"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_below="@id/submitButton"
+                    android:layout_alignParentRight="true"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+
+<!--            name-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postNameParent"
+                android:layout_alignParentTop="true"
+                >
+                <TextView
+                    android:id="@+id/postRecipeNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Recipe Name"
+                    android:textSize="20dp"
+                    />
+
+                <EditText
+                    android:id="@+id/postRecipeNameEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:hint="Recipe Name"
+                    android:layout_below="@id/postRecipeNameText"
+                    />
+            </RelativeLayout>
+
+
+<!--            image-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postNameParent"
+                android:id="@+id/postImgParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postImgText"
+                    android:text="Image Upload"
+                    android:textSize="20dp"
+                    />
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/postImgText"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/postImgView"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Image from Photos"
+                    android:layout_toRightOf="@id/postImgView"
+                    android:textSize="15dp"
+                    android:id="@+id/postChooseImgBtn"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+
+<!--            ingredients-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postImgParent"
+                android:id="@+id/postIngreParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postIngreTitle"
+                    android:text="Ingredients"
+                    android:textSize="20dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postIngreRecView"
+                    android:layout_below="@id/postIngreTitle"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postAddIngreRelativeLayout"
+                    android:layout_below="@id/postIngreRecView"
+                    >
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/postAddIngreName"
+                        android:hint="Ingredient Name"
+                        android:layout_alignParentLeft="true"/>
+
+                    <EditText
+                        android:id="@+id/postAddIngreQt"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="1"
+                        android:layout_toLeftOf="@id/postAddIngreUnit"/>
+
+                    <EditText
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Unit"
+                        android:id="@+id/postAddIngreUnit"
+                        android:layout_alignParentRight="true"/>
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Another"
+                        android:layout_below="@id/postAddIngreName"
+                        android:textSize="15dp"
+                        android:id="@+id/postAddIngreBtn"/>
+
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+<!--            instructions-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postIngreParent"
+                android:id="@+id/postInstrParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instructions"
+                    android:textSize="20dp"
+                    android:id="@+id/postInstr"/>
+
+                <EditText
+                    android:id="@+id/postInstrEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:hint="Type Instructions Here"
+                    android:layout_below="@id/postInstr"
+                    />
+            </RelativeLayout>
+
+<!--            tags-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postInstrParent"
+                android:id="@+id/postTagsParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tags (please select at least one)"
+                    android:textSize="20dp"
+                    android:id="@+id/postTagText"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postTagsLinear"
+                    android:layout_below="@id/postTagText"
+                    >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vegan"
+                        android:id="@+id/veganBtn"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spicy"
+                        android:id="@+id/spicyBtn"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mild"
+                        android:id="@+id/mildBtn"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fast"
+                        android:id="@+id/fastBtn"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+<!--            cook time-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postCookTimeParent"
+                android:layout_below="@id/postTagsParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cook Time"
+                    android:textSize="20dp"
+                    android:id="@+id/postCookTimeText"
+                    android:layout_marginTop="10dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Estimated Cooking Time"
+                    android:id="@+id/postCookTimeEdit"
+                    android:layout_toRightOf="@+id/postCookTimeText"
+                    android:layout_marginLeft="10dp"
+                    />
+            </RelativeLayout>
+
+<!--            serving size-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postCookTimeParent"
+                android:id="@+id/postServingSizeParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Serving Size"
+                    android:textSize="20dp"
+                    android:id="@+id/postServingSizeText"
+                    android:layout_marginTop="10dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="1"
+                    android:id="@+id/postServingSizeEdit"
+                    android:layout_toRightOf="@id/postServingSizeText"
+                    android:layout_marginLeft="10dp"
+                    />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        </ScrollView>
+
+
+
+
+</RelativeLayout>

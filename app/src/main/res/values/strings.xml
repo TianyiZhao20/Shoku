@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Shokumotsu</string>
+    <string name="submit">Submit</string>
+    <string name="username">Composer Name</string>
+    <string name="title">Some short sample text.</string>
+    <string name="timestamp">timestamp</string>
+    <string name="chattImageView">chattImageView</string>
+    <string name="Instructions">Recipe Instructions.\n Step 1:...</string>
+    <string name="ingreName">Food</string>
+    <string name="ingreQt">0</string>
+    <string name="ingreUnit">qt.</string>
+</resources>

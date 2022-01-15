@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/postIngreRecParent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/postIngreNameText"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20dp"
+            android:id="@+id/postIngreQtText"
+            android:layout_toLeftOf="@+id/postIngreUnitText"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="15dp"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Unit"
+            android:textSize="20dp"
+            android:id="@+id/postIngreUnitText"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

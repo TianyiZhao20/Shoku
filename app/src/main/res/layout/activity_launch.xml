@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaunchActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/launchLogo"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/getLocationLayout"
+        android:layout_below="@id/launchLogo"
+        android:layout_above="@id/launchWarning"
+        android:layout_marginHorizontal="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Invalid zip code"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible"
+            android:id="@+id/zipCodePromptText"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zipCodePromptText"
+            android:text="Zip Code"
+            android:textSize="20dp"
+            android:id="@+id/zipCodeprompt"/>
+
+        <EditText
+            android:id="@+id/editTextZipCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@id/zipCodeprompt"
+            android:text="" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextZipCode"
+            android:text="Search"
+            android:id="@+id/searchZipCodeBtn"/>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/searchZipCodeBtn"
+            android:id="@+id/locationsSpinner"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a Kroger store first"
+            android:layout_below="@id/locationsSpinner"
+            android:id="@+id/spinnerWarnTxt"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerWarnTxt"
+            android:layout_centerHorizontal="true"
+            android:text="Start"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/startBtn"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/launchWarning"
+        android:layout_alignParentBottom="true"
+        android:text="Tip: Your local shopping cart will be emptied when you close the app."
+        />
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/launchWarning"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="Start"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:textColor="@color/colorAccent"-->
+<!--        android:textStyle="bold"-->
+<!--        android:id="@+id/launchBtn"/>-->
+
+</RelativeLayout>
